@@ -1,46 +1,54 @@
+@import url('https://fonts.googleapis.com/css?family=Permanent+Marker|Rubik&display=swap&subset=cyrillic');
+
 html,
 body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: sans-serif;
+  width: 100%;
+  height: 100%;
+  font-family: 'Rubik', sans-serif;
 }
 
 nav {
-  background: rgba(51,167,128,0.9);
+  background: #F8D8B6;
 }
 
-nav ul {
-  display: flex;
-  justify-content: space-evenly;
+.head .main_menu .navbar .navbar-brand {
+  font-family: 'Permanent Marker', cursive;
+  text-transform: uppercase;
 }
 
-nav ul>li {
-  display: block;
+.head .main_menu .nav-item .nav-link {
+  color: #D5B48D;
+  text-transform: uppercase;
+  padding: 1rem;
+}
+
+.head .main_menu .navbar-nav .active a {
+  color: #5C3D26;
+}
+
+.head .main_menu .navbar-nav a:hover {
+  color: #5C3D26;
 }
 
 section {
-  background: url("./img/МСМ.jpg");
-  height: 100vh;
-}
-
-img {
-  max-width:100%;
-  max-height:100%;
-  object-fit: cover;
+  background: url("./img/background.png");
+  background-size: contain;
+  height: 70vh;
 }
 
 #time {
   position: relative;
   top: 10px;
   left: 10px;
-  width: 80px;
+  width: 100px;
   padding: 10px;
   text-align: center;
   background: white;
   border-radius: 10px;
   border: 1px solid black;
-  opacity: 0.8;
   font-size: 20px;
 }
 
@@ -62,27 +70,28 @@ img {
   position: relative;
   left: 10px;
   top: 50px;
-  width: 300px;
+  width: 310px;
   background: white;
-  opacity: 0.8;
   border-radius: 10px;
+  border: 1px solid #5C3D26;
 }
 
 .prayer > .prayer-head {
   display: inline-block;
   width: 290px;
-  background: rgba(51,167,128,0.9);
+  background: #228B22;
   border-radius: 10px;
-  margin: 5px;
+  margin: 10px;
   text-align: center;
 }
 
 .prayer .prayer-head .prayer-title {
-  text-transform: uppercase;
+  color: white;
 }
 
 .prayer .prayer-content p {
-  padding: 5px 10px;
+  padding: 0 10px;
+  border-bottom: 1px dashed #5C3D26;
 }
 
 .prayer .prayer-content span {

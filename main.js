@@ -36,12 +36,12 @@ async function getNamazTimes(latitude, longitude) {
   
   data1.data.forEach(day => {
     if (day.date.gregorian.date == currentDateFormatted) {
-      document.getElementById('fajr').innerHTML = day.timings.Fajr;
-      document.getElementById('sunrise').innerHTML = day.timings.Sunrise;
-      document.getElementById('dhuhr').innerHTML = day.timings.Dhuhr;
-      document.getElementById('asr').innerHTML = day.timings.Asr;
-      document.getElementById('maghrib').innerHTML = day.timings.Maghrib;
-      document.getElementById('isha').innerHTML = day.timings.Isha;
+      document.getElementById('fajr').innerHTML = day.timings.Fajr.split(' ')[0];
+      document.getElementById('sunrise').innerHTML = day.timings.Sunrise.split(' ')[0];
+      document.getElementById('dhuhr').innerHTML = day.timings.Dhuhr.split(' ')[0];
+      document.getElementById('asr').innerHTML = day.timings.Asr.split(' ')[0];
+      document.getElementById('maghrib').innerHTML = day.timings.Maghrib.split(' ')[0];
+      document.getElementById('isha').innerHTML = day.timings.Isha.split(' ')[0];
     }
   });
 

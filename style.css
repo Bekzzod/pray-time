@@ -1,0 +1,90 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+nav {
+  background: rgba(51,167,128,0.9);
+}
+
+nav ul {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+nav ul>li {
+  display: block;
+}
+
+section {
+  background: url("./img/МСМ.jpg");
+  height: 100vh;
+}
+
+img {
+  max-width:100%;
+  max-height:100%;
+  object-fit: cover;
+}
+
+#time {
+  position: relative;
+  top: 10px;
+  left: 10px;
+  width: 80px;
+  padding: 10px;
+  text-align: center;
+  background: white;
+  border-radius: 10px;
+  border: 1px solid black;
+  opacity: 0.8;
+  font-size: 20px;
+}
+
+#time #color::after {
+  content: ":";
+  animation: blink 1s infinite ease;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.prayer {
+  position: relative;
+  left: 10px;
+  top: 50px;
+  width: 300px;
+  background: white;
+  opacity: 0.8;
+  border-radius: 10px;
+}
+
+.prayer > .prayer-head {
+  display: inline-block;
+  width: 290px;
+  background: rgba(51,167,128,0.9);
+  border-radius: 10px;
+  margin: 5px;
+  text-align: center;
+}
+
+.prayer .prayer-head .prayer-title {
+  text-transform: uppercase;
+}
+
+.prayer .prayer-content p {
+  padding: 5px 10px;
+}
+
+.prayer .prayer-content span {
+  float: right;
+}

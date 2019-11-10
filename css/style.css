@@ -17,7 +17,9 @@ nav {
 
 .head .main_menu .navbar .navbar-brand {
   font-family: var(--logo-font);
+  color: var(--primary-text-color);
   text-transform: uppercase;
+  font-size: 30px;
 }
 
 .head .main_menu .nav-item .nav-link {

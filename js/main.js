@@ -44,7 +44,6 @@ function getLocation(callback) {
 async function getNamazTimes(latitude, longitude) {
   const namazTimesURL = `https://api.aladhan.com/v1/calendar?latitude=${latitude}&longitude=${longitude}&method=0&month=${currentDate.getMonth() +
     1}&year=${currentDate.getFullYear()}`;
-  console.log(namazTimesURL);
   const response1 = await fetch(namazTimesURL);
   const data1 = await response1.json();
 

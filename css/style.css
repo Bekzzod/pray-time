@@ -68,19 +68,15 @@ section {
   }
 }
 
-.prayer {
-  position: relative;
-  top: 30%;
+.namaz-times {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  justify-items: center;
+  align-items: center;
+  height: 90%;
 }
 
-.prayer .namaz-times {
-  display: flex;
-  flex-direction: row;
-  width: 100%;
-  justify-content: space-evenly;
-}
-
-.prayer .namaz-times div {
+.namaz-times div {
   display: flex;
   justify-content: center;
   align-items: center;

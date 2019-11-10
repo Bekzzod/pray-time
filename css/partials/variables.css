@@ -1,0 +1,9 @@
+:root {
+  --primary-color: #D5B48D;
+  --primary-text-color: #5C3D26;
+  --secondary-text-color: #F8D8B6;
+
+  --logo-font: 'Permanent Marker', cursive;
+  --font: 'Rubik', sans-serif;
+  --box-shadow: 5px 5px 7px 0px var(--primary-color);
+}

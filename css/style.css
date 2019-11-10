@@ -12,7 +12,7 @@ body {
 }
 
 nav {
-  background: var(--primary-color);
+  background: var(--primary-element-color);
 }
 
 .head .main_menu .navbar .navbar-brand {
@@ -49,9 +49,9 @@ section {
   background: white;
   color: var(--primary-text-color);
   border-radius: 10px;
-  border: 1px solid var(--primary-color);
+  border: var(--primary-element-border);
   font-size: 20px;
-  box-shadow: var(--box-shadow);
+  box-shadow: var(--box-shadow-rect);
 }
 
 #time #color::after {
@@ -70,39 +70,31 @@ section {
 
 .prayer {
   position: relative;
-  left: 10px;
-  top: 80px;
-  width: 310px;
-  background: white;
+  top: 30%;
+}
+
+.prayer .namaz-times {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-evenly;
+}
+
+.prayer .namaz-times div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 150px;
+  height: 150px;
   color: var(--primary-text-color);
-  border-radius: 10px;
-  border: 1px solid var(--primary-color);
-  box-shadow: var(--box-shadow);
+  background: white;
+  border-radius: 50%;
+  border: var(--primary-element-border);
+  box-shadow: var(--box-shadow-circle);
+  font-size: 20px;
 }
 
-.prayer > .prayer-head {
-  display: inline-block;
-  width: 95%;
-  background: var(--primary-color);
-  border-radius: 10px;
-  margin: 10px 10px 5px 10px;
-  text-align: center;
-}
-
-.prayer .prayer-content p {
-  margin: 5px 10px;
-  border-bottom: 1px dashed var(--primary-text-color);
-}
-
-.active {
-  color: red;
-}
-
-.prayer .prayer-content p:last-of-type {
-  border-bottom: none;
-}
-
-
-.prayer .prayer-content span {
-  float: right;
+.prayer .namaz-times div p {
+  margin: 0;
 }

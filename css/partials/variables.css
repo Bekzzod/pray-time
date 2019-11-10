@@ -1,9 +1,11 @@
 :root {
-  --primary-color: #D5B48D;
-  --primary-text-color: #5C3D26;
-  --secondary-text-color: #F8D8B6;
+  --primary-element-color: #d5b48d;
+  --primary-text-color: #5c3d26;
+  --secondary-text-color: #f8d8b6;
 
-  --logo-font: 'Permanent Marker', cursive;
-  --font: 'Rubik', sans-serif;
-  --box-shadow: 5px 5px 7px 0px var(--primary-color);
+  --logo-font: "Permanent Marker", cursive;
+  --font: "Rubik", sans-serif;
+  --primary-element-border: 1px solid var(--primary-element-color);
+  --box-shadow-rect: 5px 5px 7px 0px var(--primary-color);
+  --box-shadow-circle: 0px 0px 5px 2px var(--primary-color);
 }

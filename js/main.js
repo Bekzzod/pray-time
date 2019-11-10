@@ -1,9 +1,10 @@
 let currentDate = new Date();
 const currentDateFormatted = ('0' + currentDate.getDate()).slice(-2) + '-' + ('0' + (currentDate.getMonth()+1)).slice(-2) + '-' + currentDate.getFullYear();
+const currentTimeFormatted = ('0' + currentDate.getHours()).slice(-2) + ":" + ('0' + currentDate.getMinutes()).slice(-2);
 const dateURL = `https://api.aladhan.com/v1/gToH?date=${currentDateFormatted}`;
 
 function updateClock() {
-  currentDate = new Date() // current date
+  currentDate = new Date(); // current date
 
   document.getElementById('hours').innerHTML = ('0' + currentDate.getHours()).slice(-2);
   document.getElementById('minutes').innerHTML = ('0' + currentDate.getMinutes()).slice(-2);
@@ -36,14 +37,25 @@ async function getNamazTimes(latitude, longitude) {
   
   data1.data.forEach(day => {
     if (day.date.gregorian.date == currentDateFormatted) {
-      document.getElementById('fajr').innerHTML = day.timings.Fajr.split(' ')[0];
-      document.getElementById('sunrise').innerHTML = day.timings.Sunrise.split(' ')[0];
-      document.getElementById('dhuhr').innerHTML = day.timings.Dhuhr.split(' ')[0];
-      document.getElementById('asr').innerHTML = day.timings.Asr.split(' ')[0];
-      document.getElementById('maghrib').innerHTML = day.timings.Maghrib.split(' ')[0];
-      document.getElementById('isha').innerHTML = day.timings.Isha.split(' ')[0];
+      const timings = {
+        fajr: day.timings.Fajr.split(' ')[0],
+        sunrise: day.timings.Sunrise.split(' ')[0],
+        dhuhr: day.timings.Dhuhr.split(' ')[0],
+        asr: day.timings.Asr.split(' ')[0],
+        maghrib: day.timings.Maghrib.split(' ')[0],
+        isha: day.timings.Isha.split(' ')[0]
+      };
+      
+      for (let [key, value] of Object.entries(timings)) {
+        document.querySelector(`#${key} span`).innerHTML = value;
+      }
+
+      for (let [key, value] of Object.entries(timings)) {
+        if (Date.parse(`01/01/2011 ${currentTimeFormatted}`) < Date.parse(`01/01/2011 ${value}`)) {
+          document.getElementById(key).classList.add('active');
+          break;
+        }
+      }
     }
   });
-
-  console.log(data1);
 }

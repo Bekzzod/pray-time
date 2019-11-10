@@ -94,6 +94,10 @@ section {
   border-bottom: 1px dashed var(--primary-text-color);
 }
 
+.active {
+  color: red;
+}
+
 .prayer .prayer-content p:last-of-type {
   border-bottom: none;
 }

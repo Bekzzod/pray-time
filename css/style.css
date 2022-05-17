@@ -94,3 +94,28 @@ section {
 .prayer .namaz-times div p {
   margin: 0;
 }
+ 
+footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: var(--font);
+  background: var(--primary-element-color);
+  color: var(--primary-text-color);
+  height: 20vh;
+}
+
+footer a {
+  text-decoration: none;
+  color: var(--primary-text-color);
+  -webkit-transition: color 0.5s;
+  -moz-transition:    color 0.5s;
+  -ms-transition:     color 0.5s;
+  -o-transition:      color 0.5s;
+  transition:         color 0.5s;
+}
+
+footer a:hover {
+  color: var(--primary-text-color);
+}

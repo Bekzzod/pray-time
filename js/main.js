@@ -71,8 +71,8 @@ async function getNamazTimes(latitude, longitude) {
             "var(--secondary-text-color)";
           break;
         }
-        document.getElementById("isha").style.backgroundColor =
-          "var(--secondary-text-color)";
+        //document.getElementById("isha").style.backgroundColor =
+        //"var(--secondary-text-color)";
       }
     }
   });

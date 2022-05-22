@@ -43,7 +43,7 @@ section {
   position: relative;
   left: 10px;
   top: 10px;
-  width: 100px;
+  width: 120px;
   padding: 10px;
   text-align: center;
   background: white;
@@ -52,20 +52,6 @@ section {
   border: var(--primary-element-border);
   font-size: 20px;
   box-shadow: var(--box-shadow-rect);
-}
-
-#time #color::after {
-  content: ":";
-  animation: blink 1s infinite ease;
-}
-
-@keyframes blink {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
 }
 
 .namaz-times {
@@ -96,10 +82,11 @@ section {
 }
  
 footer {
-  display: flex;
+  /*display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  */
   font-family: var(--font);
   background: var(--primary-element-color);
   color: var(--primary-text-color);
@@ -117,5 +104,6 @@ footer a {
 }
 
 footer a:hover {
+  text-decoration: none;
   color: var(--primary-text-color);
 }
